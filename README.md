@@ -1,6 +1,4 @@
-====================================================
-Task 2: Zoo-Registration-System (create new github gepo )
-====================================================
+Task 2: Zoo-Registration-System
 
 A zoo is building a small internal system to register animals and track basic operational rules.
 The zoo has two animal categories for now:
