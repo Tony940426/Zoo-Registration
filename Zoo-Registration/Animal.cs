@@ -8,12 +8,13 @@ namespace Zoo_Registration
 {
     public abstract class Animal
     {
-       public int id { get; }
-       public string name { get; set; }
-       public int age { get; set; }
+       public int Id { get; }
+       public string Name { get; set; }
+       public int Age { get; set; }
 
-       private static int idCounter = 0;    
-
+       private static int IdCounter = 0;    
+        
+       List<Animal> animals = new List<Animal>();
         protected Animal(string Name, int Age)
         {
             if (string.IsNullOrEmpty(Name))
@@ -23,12 +24,19 @@ namespace Zoo_Registration
 
             if (Age < 0)
             {
-                throw new ArgumentException("Age cannot be negative.");
+                throw new ArgumentException("Age must be greated than zero");
             };
 
-            this.id = ++idCounter;
-            this.name = Name;
-            this.age = Age;
+            this.Id = ++IdCounter;
+            this.Name = Name;
+            this.Age = Age;
+        }
+
+
+
+        public virtual void DisplayDetails()
+        {
+            Console.Write($"ID: {Id} | Name: {Name} | Age: {Age} | ");
         }
     }
 }

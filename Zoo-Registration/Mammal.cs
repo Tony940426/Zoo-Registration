@@ -17,10 +17,17 @@ namespace Zoo_Registration
             if (string.IsNullOrEmpty(furColor))
             {
                 throw new ArgumentException("FurColor cannot be null or empty.");
-            };
+            }
 
             this.FurColor = furColor;
             this.IsCarnivore = isCarnivore;
         }
+
+        public override void DisplayDetails() 
+        {
+            base.DisplayDetails();
+            Console.WriteLine($"FurColor: {FurColor}| Carnivore: {IsCarnivore}");
+        }
+
     }
 }
